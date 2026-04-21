@@ -97,3 +97,63 @@ The system dynamically allocates parking slots, tracks vehicle entry and exit, a
 ## 🧪 Sample Inputs
 
 ### ✔ Valid RFID IDs
+16014024013
+16014024014
+16014024015
+16014024016
+16014024017
+16014024018
+
+
+### ❌ Invalid Input
+
+12345678901
+
+
+---
+
+## 💯 Output Behavior
+
+- Assigns slots sequentially (1–5)
+- Automatically reuses freed slots
+- Displays **PARKING FULL** when capacity is reached
+- Displays **INVALID USER** for unauthorized access
+
+---
+
+## 🎯 Applications
+
+- Smart Parking Systems
+- Residential Parking Automation
+- Office & Campus Parking Management
+- RFID-based Access Control Systems
+
+---
+
+## ⭐ Highlights
+
+- Efficient slot management using arrays and embedded logic
+- Real-time simulation of an embedded system using Proteus
+- UART-based RFID emulation for testing and validation
+- Modular and optimized 8051 Embedded C implementation
+
+---
+
+## 🔍 Keywords
+
+RFID • 8051 • Embedded Systems • Smart Parking • Keil µVision • Proteus • UART • Microcontroller • IoT Systems
+
+---
+
+## 🔮 Future Enhancements
+
+- Integration with real RFID hardware modules
+- IR sensors for automatic vehicle detection
+- Mobile/web application for slot monitoring
+- Cloud-based database for vehicle tracking and analytics
+
+---
+
+## 👨‍💻 Author
+
+**Purv Doshi**  
