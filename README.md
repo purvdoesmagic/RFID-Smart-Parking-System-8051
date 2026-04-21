@@ -66,7 +66,7 @@ The system is simulated in **Proteus** and programmed using **Embedded C in Keil
 
 ### 💻 Output (Virtual Terminal)
 
-[Output](Virtual Terminal.png)
+[Output](output.png)
 
 ---
 
