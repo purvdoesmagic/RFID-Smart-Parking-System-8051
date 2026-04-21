@@ -1,60 +1,78 @@
 # 🚗 RFID Smart Parking System (8051)
 
+<p align="center">
+  <b>Smart Parking using 8051 Microcontroller • Keil µVision • Proteus Simulation</b>
+</p>
+
+---
+
 ## 📌 Overview
 
-This project implements a **Smart Parking System using the AT89C51 (8051) microcontroller**.
-It dynamically allocates parking slots, tracks vehicle entry and exit, and prevents over-parking using embedded system logic.
+This project presents a **Smart Parking System using the AT89C51 (8051) microcontroller** that dynamically manages parking slots in real time.
 
-The system is simulated in **Proteus** and programmed using **Embedded C in Keil µVision**.
+It assigns slots to authorized users, tracks entry and exit, and prevents over-parking using efficient embedded system logic.
+
+The system is fully simulated in **Proteus** and implemented using **Embedded C in Keil µVision**.
 
 ---
 
-## 🚗 Features
+## 🚀 Key Features
 
-* 🔹 Dynamic slot allocation (5 slots)
-* 🔹 Entry and exit tracking for each user
+* 🔹 Dynamic slot allocation (5 parking slots)
+* 🔹 Entry & exit tracking using RFID IDs
+* 🔹 Automatic slot reuse after exit
 * 🔹 Parking full detection
 * 🔹 Invalid user detection
-* 🔹 LCD display for real-time status
-* 🔹 Virtual Terminal for RFID simulation
-* 🔹 Motor-based gate control (via L293D)
+* 🔹 Real-time LCD display
+* 🔹 UART-based Virtual Terminal input
+* 🔹 Motor-controlled gate simulation (L293D)
 
 ---
 
-## 🛠️ Technologies Used
+## 🛠️ Tech Stack
 
-* **Microcontroller:** AT89C51 (8051)
-* **Programming:** Embedded C (Keil µVision)
-* **Simulation:** Proteus ISIS Professional
-* **Communication:** UART (Virtual Terminal)
+| Component       | Technology              |
+| --------------- | ----------------------- |
+| Microcontroller | AT89C51 (8051)          |
+| Language        | Embedded C              |
+| IDE             | Keil µVision            |
+| Simulation      | Proteus ISIS            |
+| Communication   | UART (Virtual Terminal) |
 
 ---
 
-## ⚙️ Working Principle
+## ⚙️ System Working
 
-1. System initializes LCD and UART communication
+1. System initializes LCD and UART
 2. User enters RFID ID via Virtual Terminal
-3. Microcontroller verifies the ID
+3. Microcontroller validates the ID
 
-* ✅ Valid User:
+### ✅ Valid User
 
-  * If entering → Assign slot
-  * If already inside → Exit & free slot
+* First scan → Assign slot
+* Second scan → Exit + slot freed
 
-* ❌ Invalid User:
+### ❌ Invalid User
 
-  * Access denied
+* Access denied
 
-4. If all slots are occupied:
+### 🚫 Full Parking
 
-   * System displays **"PARKING FULL"**
+* Displays **PARKING FULL** when no slots are available
 
-5. LCD displays:
+### 📟 Display Output
 
-   * User name
-   * Slot number
+* User name
+* Slot number
 
-6. Motor simulates gate opening and closing
+---
+
+## 🎬 Demo Flow
+
+* Enter valid RFID → Slot assigned
+* Re-enter same RFID → Exit
+* Fill all slots → Parking Full
+* Enter unknown ID → Invalid User
 
 ---
 
@@ -62,11 +80,15 @@ The system is simulated in **Proteus** and programmed using **Embedded C in Keil
 
 ### 🔌 Circuit Diagram
 
-![Circuit](Circuit.png)
+<p align="center">
+  <img src="Circuit.png" width="700"/>
+</p>
 
 ### 💻 Output (Virtual Terminal)
 
-![Output](output.png)
+<p align="center">
+  <img src="output.png" width="700"/>
+</p>
 
 ---
 
@@ -81,7 +103,7 @@ The system is simulated in **Proteus** and programmed using **Embedded C in Keil
 
 ## 🧪 Sample Inputs
 
-### ✔ Valid Users:
+### ✔ Valid Users
 
 ```
 16014024013
@@ -92,7 +114,7 @@ The system is simulated in **Proteus** and programmed using **Embedded C in Keil
 16014024018
 ```
 
-### ❌ Invalid Input:
+### ❌ Invalid Input
 
 ```
 12345678901
@@ -102,9 +124,9 @@ The system is simulated in **Proteus** and programmed using **Embedded C in Keil
 
 ## 💯 Output Behavior
 
-* Assigns slots dynamically (1–5)
-* Frees slot on exit
-* Shows **PARKING FULL** when full
+* Assigns slots from 1 to 5
+* Reuses slots after exit
+* Displays **PARKING FULL** when capacity is reached
 * Displays **INVALID USER** for unknown IDs
 
 ---
@@ -112,9 +134,33 @@ The system is simulated in **Proteus** and programmed using **Embedded C in Keil
 ## 🎯 Applications
 
 * Smart parking systems
-* Access control systems
 * Residential parking automation
-* Office parking management
+* Office & campus parking management
+* RFID-based access control
+
+---
+
+## ⭐ Highlights
+
+* Efficient slot management using arrays
+* Real-time embedded system simulation
+* UART-based RFID emulation
+* Clean and optimized 8051 implementation
+
+---
+
+## 🔍 Keywords
+
+RFID • 8051 • Embedded Systems • Smart Parking • Keil • Proteus • UART
+
+---
+
+## 🔮 Future Improvements
+
+* Real RFID hardware integration
+* IR sensors for automatic vehicle detection
+* Mobile app for slot tracking
+* Database logging system
 
 ---
 
@@ -124,20 +170,8 @@ The system is simulated in **Proteus** and programmed using **Embedded C in Keil
 
 ---
 
-## ⭐ Project Highlights
+## 📎 Resume Line
 
-* Real-time embedded system simulation
-* Efficient slot management using arrays
-* UART-based RFID emulation
-* Clean and optimized 8051 code
-
----
-
-## 📌 Future Improvements
-
-* Real RFID hardware integration
-* IR sensors for automatic slot detection
-* Mobile app integration
-* Database connectivity for logging
+> Developed an RFID-based Smart Parking System using 8051 with dynamic slot allocation, entry-exit tracking, and Proteus simulation.
 
 ---
