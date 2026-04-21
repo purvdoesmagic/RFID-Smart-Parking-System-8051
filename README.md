@@ -1,89 +1,99 @@
-# 🚗 RFID Smart Parking System (8051 + Proteus)
+# 🚗 RFID Smart Parking System (8051)
 
-A smart parking system built using **8051 microcontroller** and **RFID technology**, designed to automate vehicle entry/exit and manage parking slots efficiently. The system is simulated using **Proteus** and demonstrates real-world embedded system integration.
+<p align="center">
+  <b>Smart Parking System using 8051 Microcontroller • Keil µVision • Proteus Simulation</b>
+</p>
 
 ---
 
-## 📌 Features
+## 📌 Overview
 
-- 🔐 **RFID-based Vehicle Authentication**
-- 🚧 **Automated Entry and Exit Control**
-- 📊 **Real-time Parking Slot Monitoring**
-- 🖥️ **LCD Display for Status Updates**
-- ⚡ **Efficient Parking Flow Management**
-- 🧠 **Embedded System Logic using 8051**
+This project implements a **Smart Parking System using the AT89C51 (8051) microcontroller**, designed to efficiently manage parking slots through **RFID-based authentication and real-time tracking**.
+
+The system dynamically allocates parking slots, tracks vehicle entry and exit, and prevents over-parking using optimized embedded system logic. The complete system is simulated in **Proteus** and programmed using **Embedded C in Keil µVision**.
+
+---
+
+## 🚀 Key Features
+
+- 🔐 **RFID-based User Authentication**
+- 🚗 **Dynamic Slot Allocation (5 Slots)**
+- 🔄 **Automatic Slot Reuse after Exit**
+- 🚫 **Parking Full Detection**
+- ❌ **Invalid User Handling**
+- 📟 **Real-time LCD Display**
+- 💻 **UART-based Virtual Terminal Input**
+- ⚙️ **Motor-Controlled Gate Simulation (L293D Driver)**
 
 ---
 
 ## 🛠️ Tech Stack
 
-- **Microcontroller:** 8051  
-- **Simulation Tool:** Proteus  
-- **Programming:** Embedded C  
-- **Hardware Components:**  
-  - RFID Module  
-  - LCD Display  
-  - Microcontroller (AT89C51 / equivalent)
+| Component       | Technology              |
+|----------------|------------------------|
+| Microcontroller| AT89C51 (8051)         |
+| Language       | Embedded C             |
+| IDE            | Keil µVision           |
+| Simulation     | Proteus ISIS           |
+| Communication  | UART (Virtual Terminal)|
 
 ---
 
-## ⚙️ How It Works
+## ⚙️ System Workflow
 
-1. Vehicle arrives at the parking entry.
-2. RFID tag is scanned using the reader.
-3. System verifies the tag:
-   - ✅ Valid → Gate opens  
-   - ❌ Invalid → Access denied  
-4. Parking slot availability is checked.
-5. LCD displays:
-   - Available slots  
-   - Parking full status  
-6. On exit, RFID is scanned again to update system.
+1. System initializes LCD and UART modules
+2. User enters RFID ID via Virtual Terminal
+3. Microcontroller validates the ID
 
----
+### ✅ Valid User
+- First scan → Parking slot assigned
+- Second scan → Vehicle exit and slot freed
 
-## 📂 Project Structure
-RFID-Smart-Parking-System-8051/
-│── FinalCircuit.pdsprj # Proteus project file
-│── MiniProject.hex # Compiled microcontroller code
-│── README.md # Project documentation
+### ❌ Invalid User
+- Access denied with appropriate display message
 
+### 🚫 Parking Full Condition
+- Displays **PARKING FULL** when all slots are occupied
 
----
-
-## 🖼️ Simulation Preview
-
-> *(Add screenshots here from Proteus simulation for best impact)*
+### 📟 Display Output
+- User identification
+- Assigned slot number
+- System status messages
 
 ---
 
-## 🚀 Future Improvements
+## 🎬 Demo Flow
 
-- IoT integration for remote monitoring  
-- Mobile app for slot booking  
-- Cloud database for vehicle tracking  
-- Number plate recognition system  
-
----
-
-## 💡 Learning Outcomes
-
-- Embedded Systems Design  
-- RFID Integration  
-- Microcontroller Programming (8051)  
-- Real-time System Simulation  
-- Hardware-Software Interaction  
+- Enter valid RFID → Slot assigned
+- Re-enter same RFID → Exit processed
+- Fill all slots → Parking Full triggered
+- Enter unknown RFID → Invalid User detected
 
 ---
 
-## 👨‍💻 Author
+## 📸 Project Demonstration
 
-**Purv Doshi**  
-📧 purv.doshi@somaiya.edu  
-🔗 [LinkedIn](https://linkedin.com/in/purvdoshi)  
-💻 [GitHub](https://github.com/purvdoesmagic)
+### 🔌 Circuit Diagram
+<p align="center">
+  <img src="Circuit.png" width="700"/>
+</p>
+
+### 💻 Output (Virtual Terminal)
+<p align="center">
+  <img src="output.png" width="700"/>
+</p>
 
 ---
 
-## ⭐ If you like this project
-Give it a ⭐ on GitHub and feel free to contribute!
+## ▶️ How to Run
+
+1. Open the Proteus project file
+2. Load the provided `.hex` file into the microcontroller
+3. Run the simulation
+4. Enter RFID IDs via the Virtual Terminal
+
+---
+
+## 🧪 Sample Inputs
+
+### ✔ Valid RFID IDs
