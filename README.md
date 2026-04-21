@@ -14,6 +14,14 @@ This project implements a smart parking system using the AT89C51 microcontroller
 - Proteus Simulation
 - 8051 Microcontroller
 
+## 📸 Project Demonstration
+
+### 🔌 Circuit Diagram
+![Circuit](circuit.png)
+
+### 💻 Output (Virtual Terminal)
+![Output](output.png)
+
 ## How to Run
 1. Open Proteus file
 2. Load HEX file
