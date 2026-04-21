@@ -43,3 +43,47 @@ A smart parking system built using **8051 microcontroller** and **RFID technolog
 ---
 
 ## 📂 Project Structure
+RFID-Smart-Parking-System-8051/
+│── FinalCircuit.pdsprj # Proteus project file
+│── MiniProject.hex # Compiled microcontroller code
+│── README.md # Project documentation
+
+
+---
+
+## 🖼️ Simulation Preview
+
+> *(Add screenshots here from Proteus simulation for best impact)*
+
+---
+
+## 🚀 Future Improvements
+
+- IoT integration for remote monitoring  
+- Mobile app for slot booking  
+- Cloud database for vehicle tracking  
+- Number plate recognition system  
+
+---
+
+## 💡 Learning Outcomes
+
+- Embedded Systems Design  
+- RFID Integration  
+- Microcontroller Programming (8051)  
+- Real-time System Simulation  
+- Hardware-Software Interaction  
+
+---
+
+## 👨‍💻 Author
+
+**Purv Doshi**  
+📧 purv.doshi@somaiya.edu  
+🔗 [LinkedIn](https://linkedin.com/in/purvdoshi)  
+💻 [GitHub](https://github.com/purvdoesmagic)
+
+---
+
+## ⭐ If you like this project
+Give it a ⭐ on GitHub and feel free to contribute!
