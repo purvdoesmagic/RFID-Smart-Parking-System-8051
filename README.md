@@ -1,171 +1,45 @@
-# 🚗 RFID Smart Parking System (8051)
+# 🚗 RFID Smart Parking System (8051 + Proteus)
 
-<p align="center">
-  <b>Smart Parking using 8051 Microcontroller • Keil µVision • Proteus Simulation</b>
-</p>
+A smart parking system built using **8051 microcontroller** and **RFID technology**, designed to automate vehicle entry/exit and manage parking slots efficiently. The system is simulated using **Proteus** and demonstrates real-world embedded system integration.
 
 ---
 
-## 📌 Overview
+## 📌 Features
 
-This project presents a **Smart Parking System using the AT89C51 (8051) microcontroller** that dynamically manages parking slots in real time.
-
-It assigns slots to authorized users, tracks entry and exit, and prevents over-parking using efficient embedded system logic.
-
-The system is fully simulated in **Proteus** and implemented using **Embedded C in Keil µVision**.
-
----
-
-## 🚀 Key Features
-
-* 🔹 Dynamic slot allocation (5 parking slots)
-* 🔹 Entry & exit tracking using RFID IDs
-* 🔹 Automatic slot reuse after exit
-* 🔹 Parking full detection
-* 🔹 Invalid user detection
-* 🔹 Real-time LCD display
-* 🔹 UART-based Virtual Terminal input
-* 🔹 Motor-controlled gate simulation (L293D)
+- 🔐 **RFID-based Vehicle Authentication**
+- 🚧 **Automated Entry and Exit Control**
+- 📊 **Real-time Parking Slot Monitoring**
+- 🖥️ **LCD Display for Status Updates**
+- ⚡ **Efficient Parking Flow Management**
+- 🧠 **Embedded System Logic using 8051**
 
 ---
 
 ## 🛠️ Tech Stack
 
-| Component       | Technology              |
-| --------------- | ----------------------- |
-| Microcontroller | AT89C51 (8051)          |
-| Language        | Embedded C              |
-| IDE             | Keil µVision            |
-| Simulation      | Proteus ISIS            |
-| Communication   | UART (Virtual Terminal) |
+- **Microcontroller:** 8051  
+- **Simulation Tool:** Proteus  
+- **Programming:** Embedded C  
+- **Hardware Components:**  
+  - RFID Module  
+  - LCD Display  
+  - Microcontroller (AT89C51 / equivalent)
 
 ---
 
-## ⚙️ System Working
+## ⚙️ How It Works
 
-1. System initializes LCD and UART
-2. User enters RFID ID via Virtual Terminal
-3. Microcontroller validates the ID
-
-### ✅ Valid User
-
-* First scan → Assign slot
-* Second scan → Exit + slot freed
-
-### ❌ Invalid User
-
-* Access denied
-
-### 🚫 Full Parking
-
-* Displays **PARKING FULL** when no slots are available
-
-### 📟 Display Output
-
-* User name
-* Slot number
+1. Vehicle arrives at the parking entry.
+2. RFID tag is scanned using the reader.
+3. System verifies the tag:
+   - ✅ Valid → Gate opens  
+   - ❌ Invalid → Access denied  
+4. Parking slot availability is checked.
+5. LCD displays:
+   - Available slots  
+   - Parking full status  
+6. On exit, RFID is scanned again to update system.
 
 ---
 
-## 🎬 Demo Flow
-
-* Enter valid RFID → Slot assigned
-* Re-enter same RFID → Exit
-* Fill all slots → Parking Full
-* Enter unknown ID → Invalid User
-
----
-
-## 📸 Project Demonstration
-
-### 🔌 Circuit Diagram
-
-<p align="center">
-  <img src="Circuit.png" width="700"/>
-</p>
-
-### 💻 Output (Virtual Terminal)
-
-<p align="center">
-  <img src="output.png" width="700"/>
-</p>
-
----
-
-## ▶️ How to Run
-
-1. Open the Proteus project file
-2. Load the `.hex` file into the microcontroller
-3. Run the simulation
-4. Enter RFID IDs in the Virtual Terminal
-
----
-
-## 🧪 Sample Inputs
-
-### ✔ Valid Users
-
-```
-16014024013
-16014024014
-16014024015
-16014024016
-16014024017
-16014024018
-```
-
-### ❌ Invalid Input
-
-```
-12345678901
-```
-
----
-
-## 💯 Output Behavior
-
-* Assigns slots from 1 to 5
-* Reuses slots after exit
-* Displays **PARKING FULL** when capacity is reached
-* Displays **INVALID USER** for unknown IDs
-
----
-
-## 🎯 Applications
-
-* Smart parking systems
-* Residential parking automation
-* Office & campus parking management
-* RFID-based access control
-
----
-
-## ⭐ Highlights
-
-* Efficient slot management using arrays
-* Real-time embedded system simulation
-* UART-based RFID emulation
-* Clean and optimized 8051 implementation
-
----
-
-## 🔍 Keywords
-
-RFID • 8051 • Embedded Systems • Smart Parking • Keil • Proteus • UART
-
----
-
-## 🔮 Future Improvements
-
-* Real RFID hardware integration
-* IR sensors for automatic vehicle detection
-* Mobile app for slot tracking
-* Database logging system
-
----
-
-## 👨‍💻 Author
-
-**Purv Doshi**
-
----
+## 📂 Project Structure
