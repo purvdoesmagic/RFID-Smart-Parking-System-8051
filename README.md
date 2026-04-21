@@ -170,8 +170,4 @@ RFID • 8051 • Embedded Systems • Smart Parking • Keil • Proteus • UA
 
 ---
 
-## 📎 Resume Line
-
-> Developed an RFID-based Smart Parking System using 8051 with dynamic slot allocation, entry-exit tracking, and Proteus simulation.
-
 ---
