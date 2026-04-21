@@ -169,5 +169,3 @@ RFID • 8051 • Embedded Systems • Smart Parking • Keil • Proteus • UA
 **Purv Doshi**
 
 ---
-
----
