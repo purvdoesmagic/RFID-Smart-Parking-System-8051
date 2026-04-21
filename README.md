@@ -93,6 +93,7 @@ The system dynamically allocates parking slots, tracks vehicle entry and exit, a
 4. Enter RFID IDs via the Virtual Terminal
 
 ---
+
 ## 🧪 Sample Inputs
 
 ### ✔ Valid RFID IDs
@@ -108,6 +109,8 @@ The system dynamically allocates parking slots, tracks vehicle entry and exit, a
 ### ❌ Invalid Input
 
 12345678901
+
+
 ---
 
 ## 💯 Output Behavior
