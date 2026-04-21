@@ -97,12 +97,12 @@ The system dynamically allocates parking slots, tracks vehicle entry and exit, a
 
 ### ✔ Valid RFID IDs
 
--16014024013
--16014024014
--16014024015
--16014024016
--16014024017
--16014024018
+16014024013,
+16014024014,
+16014024015,
+16014024016,
+16014024017,
+16014024018
 
 
 ### ❌ Invalid Input
